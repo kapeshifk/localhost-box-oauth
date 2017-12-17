@@ -4,7 +4,7 @@ The idea is to let the user log in, grant access and display box.com folder item
 
 There is a self-signed SSL certificate included with default `password`
 
-Generate a new one if needed with `openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days XXX`
+Generate a new certificate if needed with `openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days XXX`
 
 Logs are generated to the console for all requests using node-bunyan
 
