@@ -1,0 +1,51 @@
+<html lang="en-US">
+
+<head>
+   <meta charset="utf-8" />
+   <title>Box Content Explorer</title>
+   <!-- polyfill.io only loads the polyfills your browser needs -->
+   <script src="public/js/polyfill.min.js"></script>
+   <!-- Latest version of the explorer css for your locale -->
+   <link rel="stylesheet" href="public/css/explorer.css" />
+</head>
+
+<body>
+   <div class="container" style="height:600px"></div>
+   <!-- Latest version of the explorer js for your locale -->
+   <script src="public/js/explorer.js"></script>
+   <script>
+      var getUrlParameter = function getUrlParameter(sParam) {
+         var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+         for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+               return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+         }
+      };
+
+      var folderId = getUrlParameter('folderId');
+      var accessToken = getUrlParameter('accessToken');
+      var contentExplorer = new Box.ContentExplorer();
+      contentExplorer.show(folderId, accessToken, {
+         container: '.container',
+         logoUrl: 'box',
+         canUpload: true,
+         canDelete: false,
+         canDownload: false,
+         canShare: false,
+         canSetShareAccess: false,
+         canPreview: true,
+         canRename: false,
+         canCreateNewFolder: false,
+         explorerTab: true
+      });
+   </script>
+</body>
+
+</html>

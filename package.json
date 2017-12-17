@@ -1,0 +1,24 @@
+{
+  "name": "localhost-https",
+  "version": "1.0.0",
+  "description": "Serve localhost endpoint in (self-signed) SSL",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "box-node-sdk": "^1.11.0",
+    "bunyan": "*",
+    "express": "*",
+    "jsonwebtoken": "^7.4.2",
+    "node-html-encoder": "0.0.2",
+    "querystring": "^0.2.0",
+    "restify": "*",
+    "underscore": "*",
+    "util": "^0.10.3",
+    "uuid": "^3.1.0"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kapeshi Flavier Kongolo, BSG",
+  "license": "ISC"
+}
