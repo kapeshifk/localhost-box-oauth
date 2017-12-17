@@ -12,9 +12,15 @@ Logs are generated to the console for all requests using node-bunyan
 npm install
 
 ## Config
+Create Box.com app and get OAuth credentials
+
+Set CORS domains to `http://localhost:8080, https://localhost` on Box.com app
+
 Set Box OAuth credentials, server ports (http, https), SSL certificate and default folder information in config.js
 
 ## Run
 node server.js
+
 Navigate to http://localhost:8080/ or https://localhost/ to check server status
+
 Navigate to http://localhost:8080/start or https://localhost/start to initiate box.com login
