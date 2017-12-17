@@ -2,7 +2,8 @@
 Basic local HTTP and HTTPS Server on NodeJS using Express.js and Restify for Box.com OAuth 2.0 and Box Content Explorer UI Element.
 The idea is to let the user log in, grant access and display box.com folder items in box ui.
 
-There is a self-signed SSL certificate included with default "password"
+There is a self-signed SSL certificate included with default `password`
+
 Generate a new one if needed with `openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days XXX`
 
 Logs are generated to the console for all requests using node-bunyan
